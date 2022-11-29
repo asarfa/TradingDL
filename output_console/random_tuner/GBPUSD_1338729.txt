@@ -1,0 +1,139 @@
+Start of the execution: 20-08-2022 16:54:36
+----------------------------------------------------------------------------------------------------
+GBPUSD
+----------------------------------------------------------------------------------------------------
+There are 42 features: ['adx_14_lag_1', 'plus_dm_14_lag_1', 'atr%_lag_1', 'CDLHIGHWAVE_lag_1', 'midpoint_14_lag_1', 'mic_lag_1',
+ 'CDLSPINNINGTOP_lag_1', 'ma_30_lag_1', 'min_lag_1', 'cmo_14_lag_1', 'CDLCLOSINGMARUBOZU_lag_1', 'distance_lag_1', 'rsi_14_lag_1',
+ 'CDLMATCHINGLOW_lag_1', 't3_5_lag_1', 'tema_30_lag_1', 'adxr_14_lag_1', 'max_lag_1', 'log_returns_lag_1', 'ht_trendline_30_lag_1',
+ 'sma_30_lag_1', 'cci_14_lag_1', 'willr_14_lag_1', 'CDLHANGINGMAN_lag_1', 'mami_lag_1', 'CDLMARUBOZU_lag_1', 'atr_lag_1', 'CDLENGULFING_lag_1',
+ 'CDLLONGLINE_lag_1', 'direction_lag_1', 'CDLBELTHOLD_lag_1', 'dema_30_lag_1', 'ema_30_lag_1', 'kama_30_lag_1', 'trima_30_lag_1', 'dx_14_lag_1',
+ 'CDLINVERTEDHAMMER_lag_1', 'wma_30_lag_1', 'plus_di_14_lag_1', 'mac_lag_1', 'returns_lag_1', 'volatility_lag_1']
+----------------------------------------------------------------------------------------------------
+Trials configuration maximizing the performance of the bot strategy with transaction cost on the validation sample: 
+----------------------------------------------------------------------------------------------------
+   model_type hidden_layers hidden_dim  ...  accuracy   performance     status
+7   SimpleRNN             2        256  ...  0.293297  2.298329e+11  COMPLETED
+16        DNN             3         32  ...  0.778253  1.243773e+08  COMPLETED
+27       LSTM             2        128  ...  0.707624  6.957408e+07  COMPLETED
+2         DNN             3         96  ...  0.730219  5.363276e+07  COMPLETED
+22  SimpleRNN             3         64  ...  0.728176  5.124086e+07  COMPLETED
+24  SimpleRNN             2        128  ...  0.744498  5.027360e+07  COMPLETED
+11        DNN             2        192  ...  0.762210  4.678062e+07  COMPLETED
+26        DNN             3         64  ...  0.725765  3.939216e+07  COMPLETED
+8         DNN             3        128  ...  0.756540  3.191258e+07  COMPLETED
+29  SimpleRNN             2        128  ...  0.751349  2.619616e+07  COMPLETED
+31       LSTM             1         32  ...  0.721420  2.407933e+07  COMPLETED
+1         DNN             2        224  ...  0.708775  2.399115e+07  COMPLETED
+19        DNN             1        224  ...  0.666456  1.782965e+07  COMPLETED
+32        GRU             2         32  ...  0.782379  1.730216e+07  COMPLETED
+4        LSTM             2         96  ...  0.721331  1.027084e+07  COMPLETED
+14        DNN             1        160  ...  0.738515  9.986044e+06  COMPLETED
+12        DNN             2        160  ...  0.727529  6.209924e+06  COMPLETED
+13        DNN             2        128  ...  0.734055  5.411145e+06  COMPLETED
+9         DNN             1         32  ...  0.728206  2.904901e+06  COMPLETED
+23        GRU             3        224  ...  0.718815  2.108555e+06  COMPLETED
+34       LSTM             2         96  ...  0.685618  1.581318e+06  COMPLETED
+17        GRU             2        128  ...  0.682230  1.311974e+06  COMPLETED
+0        LSTM             1         64  ...  0.697789  1.021923e+06  COMPLETED
+28       LSTM             2        128  ...  0.710838  8.276058e+05  COMPLETED
+10        GRU             3        128  ...  0.685787  7.906849e+05  COMPLETED
+21       LSTM             2        224  ...  0.686410  6.122360e+05  COMPLETED
+35        GRU             2        192  ...  0.690082  5.501492e+05  COMPLETED
+18        GRU             2        160  ...  0.688029  3.922004e+05  COMPLETED
+3        LSTM             3         64  ...  0.677920  3.789489e+05  COMPLETED
+33        GRU             2        256  ...  0.660293  2.855097e+05  COMPLETED
+15        GRU             2        224  ...  0.666705  2.669998e+05  COMPLETED
+30  SimpleRNN             3        128  ...  0.718735  2.115197e+05  COMPLETED
+5   SimpleRNN             3        160  ...  0.659789  1.420201e+04  COMPLETED
+25  SimpleRNN             1        128  ...  0.582798  4.431359e+03  COMPLETED
+6   SimpleRNN             2        192  ...  0.672973  3.402917e+03  COMPLETED
+20  SimpleRNN             3        128  ...  0.573895  1.060449e+03  COMPLETED
+
+[36 rows x 12 columns]
+----------------------------------------------------------------------------------------------------
+Model's hyper-parameters: {'model_type': 'SimpleRNN', 'hidden_layers': 2, 'hidden_dim': 256, 'activation': 'elu',
+'lr': 0.0071544516667882965, 'optimizer': 'Adam', 'rate_dropout': 0.21502713359805062, 'l1': 0.0005950944246430779, 'l2': 0.00270220203015618}
+************************ Accuracy in sample: 0.26801869344395435 ************************
+************************ Accuracy out-of-sample: 0.26867486086960857 ************************
+The number of trades is 41340, there is a total of 200711 ticks
+The absolute performance of the strategy with tc is 61813344368.2%
+The outperformance of the strategy with tc is 61813344368.2%
+****************************************************************************************************
+----------------------------------------------------------------------------------------------------
+Ensemble Learning will be computed with the top 3 models
+----------------------------------------------------------------------------------------------------
+Model's hyper-parameters: {'model_type': 'SimpleRNN', 'hidden_layers': 2, 'hidden_dim': 256, 'activation': 'elu', 'lr': 0.0071544516667882965,
+ 'optimizer': 'Adam', 'rate_dropout': 0.21502713359805062, 'l1': 0.0005950944246430779, 'l2': 0.00270220203015618}
+************************ Accuracy in sample: 0.26801869344395435 ************************
+Model's hyper-parameters: {'model_type': 'DNN', 'hidden_layers': 3, 'hidden_dim': 32, 'activation': 'relu', 'lr': 0.00012220548905137214,
+ 'optimizer': 'RMSprop', 'rate_dropout': 0.28290316588919484, 'l1': 0.0006696573778628642, 'l2': 0.0016354957496369222}
+************************ Accuracy in sample: 0.6915144186900288 ************************
+Model's hyper-parameters: {'model_type': 'LSTM', 'hidden_layers': 2, 'hidden_dim': 128, 'activation': 'selu', 'lr': 0.0030870515462994175,
+ 'optimizer': 'RMSprop', 'rate_dropout': 0.1360193050366086, 'l1': 0.0007700360080183217, 'l2': 0.002887513711967114}
+************************ Accuracy in sample: 0.5803953627110829 ************************
+For each bar of the test environnement, the position taken is the one with the biggest occurrence from all networks of the ensemble method used above
+************************ Accuracy out-of-sample: 0.7322667915560184 ************************
+The number of trades is 77530, there is a total of 200711 ticks
+The absolute performance of the strategy with tc is 22052351.3%
+The outperformance of the strategy with tc is 22052351.2%
+****************************************************************************************************
+----------------------------------------------------------------------------------------------------
+Ensemble Learning will be computed with the best model under 5 different random seeds
+----------------------------------------------------------------------------------------------------
+Seeds used: [49, 97, 53, 5, 33]
+************************ Accuracy in sample: 0.3308566690109956 ************************
+************************ Accuracy in sample: 0.2125605514544622 ************************
+************************ Accuracy in sample: 0.3393240008409702 ************************
+************************ Accuracy in sample: 0.29515385592302346 ************************
+************************ Accuracy in sample: 0.27750735582110386 ************************
+For each bar of the test environnement, the position taken is the one with the biggest occurrence from all networks of the ensemble method used above
+************************ Accuracy out-of-sample: 0.2526219290422548 ************************
+The number of trades is 51861, there is a total of 200711 ticks
+The absolute performance of the strategy with tc is 11284536654051.6%
+The outperformance of the strategy with tc is 11284536654051.5%
+****************************************************************************************************
+----------------------------------------------------------------------------------------------------
+Ensemble Learning will be computed with the best model dropping randomly 30.0% of features, 5 times fitted
+----------------------------------------------------------------------------------------------------
+Features set to 0: ['mami_lag_1' 'atr_lag_1' 'atr%_lag_1' 'adxr_14_lag_1' 'ema_30_lag_1'
+ 'dema_30_lag_1' 'CDLMARUBOZU_lag_1' 'ht_trendline_30_lag_1'
+ 'CDLBELTHOLD_lag_1' 'willr_14_lag_1' 'CDLMATCHINGLOW_lag_1'
+ 'plus_di_14_lag_1']
+************************ Accuracy in sample: 0.22433840298907273 ************************
+Features set to 0: ['min_lag_1' 'CDLINVERTEDHAMMER_lag_1' 'midpoint_14_lag_1' 'adxr_14_lag_1'
+ 'ma_30_lag_1' 'dema_30_lag_1' 'CDLLONGLINE_lag_1' 'CDLBELTHOLD_lag_1'
+ 'mami_lag_1' 'CDLMATCHINGLOW_lag_1' 'CDLSPINNINGTOP_lag_1'
+ 'tema_30_lag_1']
+************************ Accuracy in sample: 0.3562127739956649 ************************
+Features set to 0: ['CDLHIGHWAVE_lag_1' 'mic_lag_1' 'returns_lag_1' 'CDLHANGINGMAN_lag_1'
+ 'CDLCLOSINGMARUBOZU_lag_1' 'ht_trendline_30_lag_1' 'adxr_14_lag_1'
+ 'CDLMATCHINGLOW_lag_1' 'atr%_lag_1' 'wma_30_lag_1' 'CDLENGULFING_lag_1'
+ 'sma_30_lag_1']
+************************ Accuracy in sample: 0.2691937038226791 ************************
+Features set to 0: ['tema_30_lag_1' 'wma_30_lag_1' 'trima_30_lag_1' 'min_lag_1'
+ 'CDLHANGINGMAN_lag_1' 'CDLBELTHOLD_lag_1' 'midpoint_14_lag_1'
+ 'adx_14_lag_1' 'CDLINVERTEDHAMMER_lag_1' 'adxr_14_lag_1' 't3_5_lag_1'
+ 'CDLSPINNINGTOP_lag_1']
+************************ Accuracy in sample: 0.21630009402217473 ************************
+Features set to 0: ['tema_30_lag_1' 'ht_trendline_30_lag_1' 'CDLSPINNINGTOP_lag_1'
+ 'CDLMARUBOZU_lag_1' 'CDLBELTHOLD_lag_1' 'cmo_14_lag_1' 'mic_lag_1'
+ 'midpoint_14_lag_1' 'plus_dm_14_lag_1' 'plus_di_14_lag_1'
+ 'log_returns_lag_1' 'ema_30_lag_1']
+************************ Accuracy in sample: 0.3073863436259689 ************************
+For each bar of the test environnement, the position taken is the one with the biggest occurrence from all networks of the ensemble method used above
+************************ Accuracy out-of-sample: 0.2265247046748808 ************************
+The number of trades is 39246, there is a total of 200711 ticks
+The absolute performance of the strategy with tc is 56674111827887.0%
+The outperformance of the strategy with tc is 56674111827887.0%
+****************************************************************************************************
+----------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------
+Ensemble Learning will be computed as an ensemble of the upcoming multiple methods: 
+----------------------------------------------------------------------------------------------------
+For each bar of the test environnement, the position taken is the one with the biggest occurrence from all networks of the mutliple ensemble methods used above
+************************ Accuracy out-of-sample: 0.24257265421426827 ************************
+The number of trades is 45350, there is a total of 200711 ticks
+The absolute performance of the strategy with tc is 5988891229595.1%
+The outperformance of the strategy with tc is 5988891229595.1%
+****************************************************************************************************
+ End of the execution: 20-08-2022 20:11:40
